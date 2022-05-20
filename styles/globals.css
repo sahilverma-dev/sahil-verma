@@ -1,16 +1,54 @@
-html,
-body {
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,600,700,800,900|Poppins:300,400,500,600,700,700i&display=swap);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.css);
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+  height: 5px;
+  width: 5px;
+  background-color: #0e1525;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #fd4900;
+  border-radius: 50px;
+}
+* {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.hide-scroll::-webkit-scrollbar {
+  display: none;
 }
 
 a {
-  color: inherit;
   text-decoration: none;
+  color: #000;
+}
+body {
+  background-color: #0e1525;
+
+  color: #fff;
+  overflow-x: hidden;
+  font-family: "Poppins", sans-serif;
+}
+img {
+  display: block;
+  object-fit: cover;
+  max-width: 100%;
+}
+li {
+  list-style: none;
 }
 
-* {
-  box-sizing: border-box;
+.gradient {
+  background: #0e1525;
+  background: linear-gradient(0deg, #131e34, rgba(14, 21, 37, 0.5));
 }
