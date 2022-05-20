@@ -37,6 +37,7 @@ const Footer = () => {
           <a
             href="https://www.linkedin.com/in/sahil-verma-970b9920a/"
             // 1="noopener noreferrer"
+            rel="noreferrer"
             target="_blank"
             className="font-semibold text-orange-500"
           >

@@ -108,7 +108,11 @@ const Project = ({ project: data }) => {
                       className="flex-shrink-0 aspect-video bg-secondary rounded-lg overflow-hidden"
                       key={index}
                     >
-                      <a href={screenshot?.src} target="_blank">
+                      <a
+                        href={screenshot?.src}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
                         <img
                           src={screenshot?.src}
                           alt={screenshot?.title}
