@@ -21,11 +21,11 @@ const About = () => {
                 <div className="flex-1 overflow-y-scroll">
                   <h1 className="text-5xl font-bold mb-5">About Me</h1>
                   <p className="mb-5">
-                    Hello World! I'm Sahil Verma, a Front-End Web Developer from
-                    Himacal Predesh India. From choreography on a stage to lines
-                    c code on a web page, I love combining the worlds of logic
-                    and creative design to make eye-catching, accessible, and
-                    user friendly websites and applications.
+                    Hello World! I&apos;m Sahil Verma, a Front-End Web Developer
+                    from Himacal Predesh India. From choreography on a stage to
+                    lines c code on a web page, I love combining the worlds of
+                    logic and creative design to make eye-catching, accessible,
+                    and user friendly websites and applications.
                   </p>
 
                   <p className="mb-5">
@@ -35,10 +35,10 @@ const About = () => {
                   </p>
 
                   <p className="mb-5">
-                    I'm excited to make the leap and continue refining my skills
-                    with the right company. Drop me a line and/or your favourite
-                    restaurant in Toronto in the contact form below or check me
-                    o at:
+                    I&apos;m excited to make the leap and continue refining my
+                    skills with the right company. Drop me a line and/or your
+                    favourite restaurant in Toronto in the contact form below or
+                    check me o at:
                   </p>
                   <div className="flex gap-6 items-center w-full text-xl">
                     {SocialMediaData?.map((social, index) => (
