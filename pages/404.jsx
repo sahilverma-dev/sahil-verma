@@ -8,9 +8,7 @@ const NotFound = () => {
       <div className="relative" id="layout-conntainer">
         <div className="min-h-screen flex flex-col px-4 relative items-center justify-center">
           <h1 className="font-extrabold text-6xl my-6">404 Not Found</h1>
-          <p className="my-6 text-2xl text-center">
-            Try a learning path instead?
-          </p>
+          <p className="my-6 text-2xl text-center">I think you are lost</p>
           <div className="flex flex-col md:flex-row">
             <div className="m-2">
               <Link href="/">
