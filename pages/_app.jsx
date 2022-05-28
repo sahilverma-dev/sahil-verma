@@ -34,7 +34,14 @@ function MyApp({ Component, pageProps, router }) {
           url,
           description: "The personal website for Sahil Verma, developer.",
           site_name: "Sahil Verma | Portfolio",
-          images: [],
+          images: [
+            {
+              url: "/images/sahil-verma.jpg",
+              width: 1200,
+              height: 630,
+              alt: "Sahil Verma | Portfolio",
+            },
+          ],
         }}
         canonical={url}
       />
