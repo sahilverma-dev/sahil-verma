@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { projectData } from "../../constants/ProjectsData";
-import Layout from "../../components/Layout";
+import { NextSeo } from "next-seo";
 import NotFound from "../404";
 
 import { motion } from "framer-motion";
@@ -45,7 +45,26 @@ const Project = ({ project: data }) => {
   return (
     <>
       {data?.length > 0 ? (
-        <Layout title={`${project?.name}`}>
+        <>
+          <NextSeo
+            title={project?.name}
+            description={project?.description}
+            canonical={`https://sahil-verma.vercel.app/project/${project?.id}`}
+            openGraph={{
+              type: "website",
+              url: `https://sahil-verma.vercel.app/project/${data[0]?.id}`,
+              title: `Sahil Verma - ${data[0]?.name}`,
+              description: data[0]?.description,
+              images: [
+                {
+                  url: data[0]?.image,
+                  width: 800,
+                  height: 600,
+                  alt: data[0]?.name,
+                },
+              ],
+            }}
+          />
           <div className="min-h-screen flex items-center w-full max-w-7xl mx-auto">
             <div className="w-full p-2 min-h-screen">
               <div className="mt-[130px]">
@@ -156,7 +175,7 @@ const Project = ({ project: data }) => {
               </div>
             </div>
           </div>
-        </Layout>
+        </>
       ) : (
         <NotFound />
       )}
