@@ -9,7 +9,18 @@ const Layout = ({ children, title, description }) => {
       <NextSeo
         title={title}
         description={description}
-        openGraph={{ title, description }}
+        openGraph={{
+          title,
+          description,
+          images: [
+            {
+              url: "/images/sahil-verma.jpg",
+              width: 1200,
+              height: 630,
+              alt: "Sahil Verma | Portfolio",
+            },
+          ],
+        }}
       />
       <motion.main
         initial="hidden"
