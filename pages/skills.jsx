@@ -5,7 +5,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { child, parent } from "../constants/variants";
 import { StackData } from "../constants/StackData";
 
-const SKillCard = ({ skill }) => (
+export const SKillCard = ({ skill }) => (
   <motion.div
     layout
     variants={child}

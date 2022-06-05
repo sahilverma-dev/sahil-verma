@@ -49,7 +49,7 @@ export const projectData = [
     id: "5b6a3384-68e7-4d81-9bb5-ad277535b675",
     name: "Sonic Meet",
     description:
-      "A clone video calling web-app built with React.js and WebRTC.",
+      "Sonic Meet is a group video calling web app built with React.js and WebRTC. In which you can create a room where different participle can join the meet. Eery users are authenticated with their Google accounts and they can toggle their audio and video.",
     image:
       "https://github.com/theviralboy/sonic-meet/raw/main/screenshot/room.png",
     icon: "https://sonic-meet.netlify.app/images/logo.png",

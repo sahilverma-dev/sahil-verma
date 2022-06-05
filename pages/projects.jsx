@@ -5,7 +5,7 @@ import { child, parent } from "../constants/variants";
 import { projectData } from "../constants/ProjectsData";
 import Link from "next/link";
 
-const ProjectCard = ({ project }) => (
+export const ProjectCard = ({ project }) => (
   <motion.div
     layout
     variants={child}
