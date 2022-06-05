@@ -41,7 +41,7 @@ https://sahil-verma.vercel.app/
 - Customizable
 - Easy to Use
 
-## How to use this project as your own portoflio?
+## How to use this project as your own portfolio?
 
 Clone the project
 
@@ -67,7 +67,7 @@ Open VS Code
   code .
 ```
 
-Now you can start working on the project. To make changes on the website, you can change the files in the **constants** directory.
+Now you can start working on the project. To make changes on the website, you can change the files in the **constants** directory and change the environment variables similar to the .env.example file.
 
 Start the server
 
