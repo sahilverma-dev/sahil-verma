@@ -3,7 +3,8 @@ export const projectData = [
     id: "88961f09-8798798-asdfadsfds-qqerr-9fec94835dcb",
     createdAt: 1660069883508,
     name: "Tadashi",
-    description: "A clone of Instagram built with Firebase and React.js.",
+    description:
+      "Tadashi is an online web-app that allows you to download Instagram photos and videos.",
     image:
       "https://github.com/theviralboy/tadashi/raw/main/screenshots/home.png",
     icon: "https://raw.githubusercontent.com/theviralboy/tadashi/main/client/public/images/logo.png",
