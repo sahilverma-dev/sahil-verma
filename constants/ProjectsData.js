@@ -1,5 +1,66 @@
 export const projectData = [
   {
+    id: "88961f09-8798798-asdfadsfds-qqerr-9fec94835dcb",
+    createdAt: 1660069883508,
+    name: "Tadashi",
+    description: "A clone of Instagram built with Firebase and React.js.",
+    image:
+      "https://github.com/theviralboy/tadashi/raw/main/screenshots/home.png",
+    icon: "https://raw.githubusercontent.com/theviralboy/tadashi/main/client/public/images/logo.png",
+    link: "https://tadashi.vercel.app/",
+    github: "https://github.com/theviralboy/tadashi",
+    stacks: [
+      "Next JS",
+      "Firebase",
+      "Tailwind CSS",
+      "Framer Motion",
+      "Node JS",
+      "Express JS",
+    ],
+    features: [
+      "User Authentication.",
+      "User can download instagram posts.",
+      "User can download instagram videos.",
+      "User can download instagram reels.",
+      "User can download IGTV videos.",
+      "User can download carousel posts.",
+      "User can download user profile image.",
+      "User can download user profile posts.",
+      "User can store the saved profiles.",
+      "User can store the saved posts.",
+    ],
+    screenshots: [
+      {
+        src: "https://github.com/theviralboy/tadashi/raw/main/screenshots/home.png",
+        title: "Home",
+      },
+      {
+        src: "https://github.com/theviralboy/tadashi/raw/main/screenshots/tools.png",
+        title: "Tools",
+      },
+      {
+        src: "https://github.com/theviralboy/tadashi/blob/main/screenshots/reel-download.png",
+        title: "Post Downloader",
+      },
+      {
+        src: "https://github.com/theviralboy/tadashi/blob/main/screenshots/reel-download.png",
+        title: "Reels Downloader",
+      },
+      {
+        src: "https://github.com/theviralboy/tadashi/raw/main/screenshots/profile.png",
+        title: "User Profile",
+      },
+      {
+        src: "https://github.com/theviralboy/tadashi/raw/main/screenshots/faq.png",
+        title: "FAQ",
+      },
+      {
+        src: "https://github.com/theviralboy/tadashi/raw/main/screenshots/contact.png",
+        title: "Contact",
+      },
+    ],
+  },
+  {
     id: "88961f09-7f8b-4090-8753-9fec94835dcb",
     createdAt: 1646270940,
     name: "Instagram Firebase",
