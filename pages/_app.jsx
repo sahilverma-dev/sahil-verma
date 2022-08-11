@@ -6,22 +6,14 @@ import "../styles/globals.css";
 
 import Router from "next/router";
 
-import NProgress from "nprogress";
 import Footer from "../components/Footer";
-
-Router.onRouteChangestart = (url) => {
-  console.log(url);
-  NProgress.start();
-};
-
-Router.onRouteChangeComplete = () => NProgress.done();
-
-Router.onRouteChangeError = () => NProgress.done();
+import NextNProgress from "nextjs-progressbar";
 
 function MyApp({ Component, pageProps, router }) {
   const url = `https://sahil-verma.netlify.app${router.route}`;
   return (
     <>
+      <NextNProgress />
       <Head>
         <link rel="icon" href="/favicon.ico" type="image/icon" />
       </Head>
