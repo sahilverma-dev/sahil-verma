@@ -40,11 +40,11 @@ export const projectData = [
         title: "Tools",
       },
       {
-        src: "https://github.com/theviralboy/tadashi/blob/main/screenshots/reel-download.png",
+        src: "https://github.com/theviralboy/tadashi/raw/main/screenshots/post-download.png",
         title: "Post Downloader",
       },
       {
-        src: "https://github.com/theviralboy/tadashi/blob/main/screenshots/reel-download.png",
+        src: "https://github.com/theviralboy/tadashi/raw/main/screenshots/reel-download.png",
         title: "Reels Downloader",
       },
       {
