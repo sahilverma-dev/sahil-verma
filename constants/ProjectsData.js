@@ -1,5 +1,61 @@
 export const projectData = [
   {
+    id: "30f4afbc-30cc-48c6-9adc-d97a2321cd09",
+    createdAt: 1660069883508,
+    name: "Todoist Firebase",
+    description:
+      "Todoist Firebase is Todoist Clone made with React JS and Firebase. This tools will help you to organize your life and works and maintain the tasks you want to performed in upcoming time.",
+    image:
+      "https://github.com/theviralboy/todoist-firebase/raw/main/public/images/open-graph.png",
+    icon: "https://static-00.iconduck.com/assets.00/todoist-icon-icon-512x512-wg7ystca.png",
+    link: "https://todoist-firebase.vercel.app/",
+    github: "https://github.com/theviralboy/todoist-firebase",
+    stacks: ["React JS", "Tailwind CSS", "Framer Motion", "Firebase"],
+    features: [
+      "User Authentication with Google.",
+      "User can create tasks and sub-tasks.",
+      "User can read, edit and delete tasks.",
+      "Dark Theme.",
+      "Responsive Design",
+      "Drag to re-order the tasks.",
+      "Authentication protected tasks.",
+    ],
+    screenshots: [
+      {
+        src: "https://github.com/theviralboy/todoist-firebase/raw/main/screenshots/home-light.png",
+        title: "Home Light",
+      },
+      {
+        src: "https://github.com/theviralboy/todoist-firebase/raw/main/screenshots/home-dark.png",
+        title: "Home Dark",
+      },
+      {
+        src: "https://github.com/theviralboy/todoist-firebase/raw/main/screenshots/task-light.png",
+        title: "Task Light",
+      },
+      {
+        src: "https://github.com/theviralboy/todoist-firebase/raw/main/screenshots/task-dark.png",
+        title: "Task Dark",
+      },
+      {
+        src: "https://github.com/theviralboy/todoist-firebase/raw/main/screenshots/resposive.png",
+        title: "Responsive Design",
+      },
+      {
+        src: "https://github.com/theviralboy/todoist-firebase/raw/main/screenshots/login.png",
+        title: "User Authentication with Google.",
+      },
+      {
+        src: "https://github.com/theviralboy/todoist-firebase/raw/main/screenshots/theme-toggle.gif",
+        title: "Theme Toggler",
+      },
+      {
+        src: "https://github.com/theviralboy/todoist-firebase/raw/main/screenshots/task-drag.gif",
+        title: "Drag to re-order the tasks",
+      },
+    ],
+  },
+  {
     id: "88961f09-8798798-asdfadsfds-qqerr-9fec94835dcb",
     createdAt: 1660069883508,
     name: "Tadashi",
