@@ -12,6 +12,7 @@
     "axios": "^0.27.2",
     "firebase": "^9.8.1",
     "framer-motion": "^6.3.3",
+    "lightgallery": "^2.7.0",
     "next": "12.1.6",
     "next-seo": "^5.4.0",
     "nextjs-progressbar": "^0.0.14",

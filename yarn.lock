@@ -1810,6 +1810,11 @@
   dependencies:
     "immediate" "~3.0.5"
 
+"lightgallery@^2.7.0":
+  "integrity" "sha512-iozIJNxKl3wPWcspCmRdaSYpYy3PjloC8BN0PDwaDOoTA1hsu1IhZdWQWI5cGgMJvnksP94/smElMwn2HS5d3Q=="
+  "resolved" "https://registry.npmjs.org/lightgallery/-/lightgallery-2.7.0.tgz"
+  "version" "2.7.0"
+
 "lilconfig@^2.0.5":
   "integrity" "sha512-xaYmXZtTHPAw5m+xLN8ab9C+3a8YmV3asNSPOATITbtwrfbwaLJj8h66H1WMIpALCkqsIzK3h7oQ+PdX+LQ9Eg=="
   "resolved" "https://registry.npmjs.org/lilconfig/-/lilconfig-2.0.5.tgz"

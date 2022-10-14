@@ -9,6 +9,18 @@ import { AiFillEye as EyeIcon } from "react-icons/ai";
 import { AiFillGithub as GitHUbIcon } from "react-icons/ai";
 import { StackData } from "../../constants/StackData";
 
+// lightbox library
+import LightGallery from "lightgallery/react";
+
+// import styles
+import "lightgallery/css/lightgallery.css";
+import "lightgallery/css/lg-zoom.css";
+import "lightgallery/css/lg-thumbnail.css";
+
+// import plugins if you need
+import lgThumbnail from "lightgallery/plugins/thumbnail";
+import lgZoom from "lightgallery/plugins/zoom";
+
 const StackIcon = ({ stack }) => (
   <motion.div
     variants={child}
@@ -112,36 +124,30 @@ const Project = ({ project: data }) => {
                 <h2 className="text-xl md:text-3xl font-semibold my-4">
                   Screenshot
                 </h2>
-                <motion.div
-                  variants={parent}
-                  initial="hidden"
-                  animate="visible"
-                  exit="exit"
-                  layout
-                  className="flex gap-4 overflow-x-scroll snap-x mb-9 hide-scroll"
+                <LightGallery
+                  speed={500}
+                  elementClassNames="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 p-3"
+                  plugins={[lgThumbnail, lgZoom]}
+                  autoplay={true}
+                  animateThumb={true}
                 >
-                  {project?.screenshots?.map((screenshot, index) => (
-                    <motion.div
-                      variants={child}
-                      layout
-                      className="flex-shrink-0 aspect-video bg-secondary rounded-lg overflow-hidden"
+                  {project?.screenshots?.map((image, index) => (
+                    <a
+                      href={image.src}
                       key={index}
+                      className="group relative shadow-lg aspect-video rounded-lg outline-hidden"
                     >
-                      <a
-                        href={screenshot?.src}
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        <img
-                          src={screenshot?.src}
-                          alt={screenshot?.title}
-                          loading="lazy"
-                          className="aspect-video snap-start h-full md:w-[500px] w-[300px]"
-                        />
-                      </a>
-                    </motion.div>
+                      <div className="absolute top-0 left-0 w-full h-full opacity-0 group-hover:opacity-100 bg-black/70 rounded-lg transition-all flex items-center justify-center text-white font-bold ">
+                        {image.title}
+                      </div>
+                      <img
+                        src={image.src}
+                        className="w-full h-full object-cover transition-all rounded-lg"
+                        loading="lazy"
+                      />
+                    </a>
                   ))}
-                </motion.div>
+                </LightGallery>
                 <h2 className="text-xl md:text-3xl font-semibold my-4">
                   Features
                 </h2>
