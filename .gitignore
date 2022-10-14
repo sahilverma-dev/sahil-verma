@@ -19,6 +19,11 @@
 .DS_Store
 *.pem
 
+# lock files
+*.lock
+*lock.json
+
+
 # debug
 npm-debug.log*
 yarn-debug.log*
