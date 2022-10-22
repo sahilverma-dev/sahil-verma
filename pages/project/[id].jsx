@@ -79,7 +79,7 @@ const Project = ({ project: data }) => {
           />
           <div className="min-h-screen flex items-center w-full max-w-7xl mx-auto">
             <div className="w-full p-2 min-h-screen">
-              <div className="mt-[130px]">
+              <div className="md:mt-[130px] mt-[80px]">
                 <div className="flex md:flex-row flex-col-reverse gap-3">
                   <div className="flex-grow">
                     <div className="text-3xl md:text-5xl font-semibold">

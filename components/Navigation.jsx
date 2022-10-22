@@ -32,7 +32,9 @@ const Navigation = () => {
     <>
       <div
         className={`fixed top-0 left-0 w-full z-50 transition-all ${
-          sticky ? " bg-primary/70 backdrop-blur " : "bg-transparent py-6"
+          sticky
+            ? " bg-primary/70 backdrop-blur "
+            : "bg-transparent md:py-6 py-2"
         }`}
       >
         <div className="max-w-7xl p-2 xl:p-0 flex items-center justify-between px-2 mx-auto">

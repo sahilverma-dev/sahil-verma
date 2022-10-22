@@ -43,7 +43,7 @@ const Contact = () => {
     <Layout title="Contact">
       <div className="min-h-screen flex items-center w-full max-w-7xl mx-auto">
         <div className="w-full p-2 min-h-screen">
-          <div className="mt-[130px]">
+          <div className="md:mt-[130px] mt-[80px]">
             <div className="flex gap-6 items-center h-full">
               <div className="w-full">
                 <h1 className="text-5xl mb-6 font-bold">Contact Me</h1>

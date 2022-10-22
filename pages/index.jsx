@@ -18,7 +18,7 @@ const Home = () => {
         <Hero />
         <section className="flex items-center w-full max-w-6xl mx-auto">
           <div className="w-full p-2">
-            <div className="mt-[130px]  h-full">
+            <div className="md:mt-[130px] mt-[80px] h-full">
               <div className="h-[600px] flex gap-3">
                 <div className="bg-gray-600 hidden md:block w-[400px]">
                   <img
