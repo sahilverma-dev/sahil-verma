@@ -1,84 +1,34 @@
-# Sahil Verma | Portfolio Website
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-A modern portfolio website made to showcase my skills and project.
+## Getting Started
 
-## Preview
-
-![Preview](/screenshots/preview.gif)
-https://sahil-verma.vercel.app/
-
-## Home Page
-
-![Home](/screenshots/home.png)
-
-## About Page
-
-![About](/screenshots/about.png)
-
-## Skills Page
-
-![Skills](/screenshots/skills.png)
-
-## Projects Page
-
-![Projects Page](/screenshots/projects.png)
-
-## Single Project Page
-
-![Single Projects Page](/screenshots/single-project.png)
-
-## Contact Page
-
-![Projects Page](/screenshots/contact.png)
-
-## Features
-
-- Responsive Design
-- Beautiful UI
-- Clean Code
-- SEO Friendly
-- Mobile Friendly
-- Customizable
-- Easy to Use
-
-## How to use this project as your own portfolio?
-
-Clone the project
+First, run the development server:
 
 ```bash
-  git clone https://github.com/theviralboy/sahil-verma
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
 ```
 
-Go to the project directory
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-```bash
-  cd sahil-verma
-```
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-Install dependencies
+This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-```bash
-  npm i
-```
+## Learn More
 
-Open VS Code
+To learn more about Next.js, take a look at the following resources:
 
-```bash
-  code .
-```
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-Now you can start working on the project. To make changes on the website, you can change the files in the **constants** directory and change the environment variables similar to the .env.example file.
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-Start the server
+## Deploy on Vercel
 
-```bash
-  npm run dev
-```
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-## Tech Stack
-
-React, Tailwind CSS, Framer Motion, FireBase 9.
-
-## Feedback
-
-If you have any feedback, please reach out to us at sahilverma.webdev@gmail.com
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.

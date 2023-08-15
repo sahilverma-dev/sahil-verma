@@ -19,19 +19,18 @@
 .DS_Store
 *.pem
 
-# lock files
-*.lock
-*lock.json
-
-
 # debug
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-.pnpm-debug.log*
 
 # local env files
+.env
 .env*.local
 
 # vercel
 .vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts

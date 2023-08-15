@@ -1,0 +1,72 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,600,700,800,900|Poppins:300,400,500,600,700,700i|Spacegrotesk&display=swap);
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  height: 5px;
+  width: 5px;
+  background-color: #0e1525;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #fd4900;
+  border-radius: 50px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.hide-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+body {
+  background-color: #0e1525;
+  color: #fff;
+  overflow-x: hidden;
+  font-family: "Poppins", sans-serif;
+}
+img {
+  display: block;
+  object-fit: cover;
+  max-width: 100%;
+}
+li {
+  list-style: none;
+}
+
+.gradient {
+  background: #0e1525;
+  background: linear-gradient(0deg, #131e34, rgba(14, 21, 37, 0.5));
+}
+
+.overlay {
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  right: auto;
+  bottom: auto;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+    0deg,
+    #0e1525,
+    rgba(14, 14, 15, 0.29) 26%,
+    rgba(14, 14, 15, 0) 41%
+  );
+}
