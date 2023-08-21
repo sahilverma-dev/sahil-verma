@@ -11,13 +11,14 @@ export const addContact = async (contactData: {
   message: string;
 }) => {
   try {
-    const { email, name, message } = contactData;
+    const { email, name, message, title } = contactData;
 
     const requestData = {
       _type: "contact",
       email,
       name,
       message,
+      title,
     };
 
     const requestHeaders = {

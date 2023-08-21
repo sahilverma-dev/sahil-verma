@@ -45,9 +45,6 @@ img {
   object-fit: cover;
   max-width: 100%;
 }
-li {
-  list-style: none;
-}
 
 .gradient {
   background: #0e1525;

@@ -3,7 +3,7 @@ import { getProjects } from "@/sanity/sanity-utils/getProjects";
 import { MetadataRoute } from "next";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = "https://sahil-verma.vercel.app";
+  const baseUrl = "https://sahilverma.dev";
   const projects = await getProjects();
   const articles = await getArticles();
 

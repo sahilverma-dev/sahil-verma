@@ -49,7 +49,7 @@ const Hero = () => {
               Contact Me
             </Link>
             <a
-              href="/resume.docx"
+              href="/resume.pdf"
               target="_blank"
               rel="noreferrer"
               className="uppercase text-sm tracking-[2px] px-10 py-4 rounded-full inline-block font-semibold transition-all text-white border-2 border-white/20 duration-200 hover:bg-orange-600 hover:scale-110"

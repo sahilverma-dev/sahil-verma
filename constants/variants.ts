@@ -21,7 +21,7 @@ export const parent: Variants = {
 };
 
 export const child: Variants = {
-  hidden: { x: -20, opacity: 0 },
+  hidden: { x: 20, opacity: 0 },
   visible: {
     x: 0,
     opacity: 1,

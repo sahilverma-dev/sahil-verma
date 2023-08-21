@@ -32,13 +32,13 @@ const ArticleCard: FC<Props> = ({ article }) => {
           className="object-cover h-full w-full"
         />
       </motion.div>
-      <div>
+      <div className="w-full">
         <div className="flex align-center mb-4 font-spacegrotesk font-medium">
           <div className="text-gray-300 uppercase">
             {formatDate(article?._createdAt)}
           </div>
         </div>
-        <h2 className="font-bold text-4xl mb-3 md:mb-7 font-spacegrotesk">
+        <h2 className="font-bold text-2xl md:text-4xl mb-3 md:mb-7 font-spacegrotesk truncate w-full">
           {article?.title}
         </h2>
         <p className="text-gray-300 mg-bottom-0">{article?.description}</p>

@@ -13,7 +13,11 @@ export const getProject: (slug: string) => Promise<Project> = async (slug) => {
         'slug': slug.current,
         'poster': poster.asset->url,
         type,
-        technologies,
+        'technologies':technologies[]->{
+          name,
+          'slug':slug.current,
+          'icon':icon.asset->url
+        },
         'images':images[].asset->url,
         source,
         preview,

@@ -1,6 +1,7 @@
 "use client";
 
 import { FC } from "react";
+import { motion } from "framer-motion";
 
 // lightbox library
 import LightGallery from "lightgallery/react";
@@ -14,6 +15,7 @@ import "lightgallery/css/lg-thumbnail.css";
 import lgThumbnail from "lightgallery/plugins/thumbnail";
 import lgZoom from "lightgallery/plugins/zoom";
 import Image from "next/image";
+import { child } from "@/constants/variants";
 
 interface Props {
   title: string;
@@ -30,7 +32,10 @@ const Gallery: FC<Props> = ({ images, title }) => {
       animateThumb={true}
     >
       {images?.map((image, index) => (
-        <a
+        <motion.a
+          variants={child}
+          initial="hidden"
+          animate="visible"
           href={image}
           key={index}
           className="group relative shadow-lg aspect-video rounded-lg outline-hidden"
@@ -39,14 +44,14 @@ const Gallery: FC<Props> = ({ images, title }) => {
             {title}
           </div>
           <Image
-            alt="hello"
+            alt={title}
             src={image}
             className="w-full h-full object-cover transition-all rounded-lg"
             loading="lazy"
             height={300}
             width={500}
           />
-        </a>
+        </motion.a>
       ))}
     </LightGallery>
   );

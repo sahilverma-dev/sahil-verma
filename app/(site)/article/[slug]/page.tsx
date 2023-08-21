@@ -1,10 +1,12 @@
 import { FC } from "react";
 import PageWrapper from "../../components/PageWrapper";
 import { getArticle } from "@/sanity/sanity-utils/getArticle";
-import Content from "./components/Content";
+
 import { formatDate } from "@/utils";
-import Poster from "./components/Poster";
+
 import { Metadata } from "next";
+import Content from "../../components/Content";
+import Poster from "../../components/Poster";
 
 interface Props {
   params: { slug: string };
@@ -33,15 +35,17 @@ const Article: FC<Props> = async ({ params }) => {
 
   return (
     <PageWrapper>
-      <div className="min-h-screen md:mt-32 mt-24 p-4 w-full max-w-7xl mx-auto flex flex-col gap-4">
+      <div className="min-h-screen md:mt-32 mt-24 p-4 max-w-4xl w-full mx-auto flex flex-col gap-4">
         <Poster _id={article._id} alt={article.title} src={article.poster} />
         <div className="text-gray-300 uppercase">
           {formatDate(article._createdAt)}
         </div>
-        <h2 className="font-bold text-4xl mb-3 md:mb-7 font-spacegrotesk">
+        <h2 className="font-bold md:text-4xl text-2xl mb-2 md:mb-7 font-spacegrotesk">
           {article.title}
         </h2>
-        <Content content={article.content} />
+        <div>
+          <Content content={article.content} />
+        </div>
       </div>
     </PageWrapper>
   );

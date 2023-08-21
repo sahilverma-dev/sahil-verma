@@ -1,3 +1,8 @@
+import { defineField } from "sanity";
+
+// icons
+import { AiFillYoutube as YoutubeIcon } from "react-icons/ai";
+
 export const projectSchema = {
   name: "project",
   title: "Projects",
@@ -44,13 +49,9 @@ export const projectSchema = {
     },
     {
       name: "technologies",
-      type: "array",
       title: "Technologies",
-      of: [
-        {
-          type: "string",
-        },
-      ],
+      type: "array",
+      of: [{ type: "reference", to: { type: "technology" } }],
     },
     {
       name: "source",
@@ -72,42 +73,74 @@ export const projectSchema = {
         },
       ],
     },
-    {
+    defineField({
       name: "content",
       title: "Content",
       type: "array",
       of: [
         {
+          title: "Block",
           type: "block",
+          styles: [
+            { title: "Normal", value: "normal" },
+            { title: "H1", value: "h1" },
+            { title: "H2", value: "h2" },
+            { title: "H3", value: "h3" },
+            { title: "H4", value: "h4" },
+            { title: "Quote", value: "blockquote" },
+          ],
+          lists: [{ title: "Bullet", value: "bullet" }],
           marks: {
             decorators: [
               { title: "Strong", value: "strong" },
               { title: "Emphasis", value: "em" },
-              { title: "Code", value: "code" },
-              { title: "Underline", value: "underline" },
-              { title: "Strike", value: "strike-through" },
+            ],
+            annotations: [
+              {
+                title: "URL",
+                name: "link",
+                type: "object",
+                fields: [
+                  {
+                    title: "URL",
+                    name: "href",
+                    type: "url",
+                  },
+                ],
+              },
             ],
           },
         },
         {
           type: "image",
+          options: {
+            hotspot: true,
+          },
           fields: [
             {
-              type: "text",
+              name: "caption",
+              type: "string",
+              title: "Image caption",
+              description: "Caption displayed below the image.",
+            },
+            {
               name: "alt",
+              type: "string",
               title: "Alternative text",
-              description: `Some of your visitors cannot see images, 
-                be they blind, color-blind, low-sighted; 
-                alternative text is of great help for those 
-                people that can rely on it to have a good idea of 
-                what\'s on your page.`,
-              options: {
-                isHighlighted: true,
-              },
+              description: "Important for SEO and accessibility.",
             },
           ],
         },
+        {
+          type: "code",
+          title: "Code",
+        },
+        {
+          type: "youtube",
+          title: "Youtube",
+          icon: YoutubeIcon,
+        },
       ],
-    },
+    }),
   ],
 };

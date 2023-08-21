@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState, useEffect } from "react";
+import { useState, useEffect, Fragment } from "react";
 import { FiMenu as MenuIcon } from "react-icons/fi";
 import { IoMdClose as CloseIcon } from "react-icons/io";
 
@@ -34,13 +34,15 @@ const Navbar = () => {
   return (
     <>
       <div
-        className={`fixed top-0 left-0 w-full z-50 transition-all ${
-          sticky ? " bg-primary-blue/70 backdrop-blur " : "bg-transparent py-6"
+        className={`fixed top-0 left-0 w-full z-[60] transition-all ${
+          sticky
+            ? " md:bg-primary-blue/70 backdrop-blur "
+            : "bg-transparent py-6"
         }`}
       >
         <div className="max-w-7xl p-2 xl:p-0 flex items-center justify-between px-2 mx-auto">
           <div className="w-[160px]">
-            <Link href="/">
+            <Link href="/" onClick={() => setMenuOpen(false)}>
               <Image
                 src="/images/logo.png"
                 alt="Sahil Verma"
@@ -90,85 +92,71 @@ const Navbar = () => {
               </a>
             ))}
           </div>
-          <div className="block md:hidden">
-            <button
-              className="flex items-center px-3 py-2 text-white text-2xl relative z-50"
-              onClick={toggleMenu}
-            >
-              {menuOpen ? <CloseIcon fill="#fff" path="#fff" /> : <MenuIcon />}
-            </button>
-          </div>
+          <button
+            className="flex md:hidden items-center px-3 py-2 text-white text-2xl"
+            onClick={toggleMenu}
+          >
+            {menuOpen ? <CloseIcon fill="#fff" path="#fff" /> : <MenuIcon />}
+          </button>
         </div>
       </div>
-      {menuOpen && (
-        <AnimatePresence>
+      <AnimatePresence mode="wait">
+        {menuOpen && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            onClick={toggleMenu}
-            className="block md:hidden h-screen w-screen fixed top-0 right-0 z-40 bg-black/50 backdrop-blur"
-          />
-          <motion.div
-            initial={{
-              opacity: 0,
-              x: 100,
-              //   transition: {
-              //     duration: 0.5,
-              //     ease: "easeInOut",
-              //   },
-            }}
-            animate={{
-              opacity: 1,
-              x: 0,
-              transition: {
-                duration: 0.5,
-                ease: "easeInOut",
-              },
-            }}
-            exit={{
-              opacity: 0,
-              x: 100,
-              transition: {
-                duration: 0.5,
-                ease: "easeInOut",
-              },
-            }}
-            className="block md:hidden h-screen w-screen sm:w-[70%] fixed top-0 right-0 z-50 transition-all bg-primary-blue"
+            transition={{ type: "spring", duration: 0.5, bounce: 0.5 }}
+            className="fixed inset-0 z-30 bg-primary-blue/70 backdrop-blur md:hidden h-screen w-full"
           >
             <motion.div
               variants={parent}
               initial="hidden"
               animate="visible"
-              exit="exit"
-              layout
-              className="mt-24 flex flex-col gap-3 p-3"
+              exit="hidden"
+              className={`w-full flex flex-col gap-3 p-3 ${
+                sticky ? "mt-16" : "mt-24"
+              }`}
             >
-              {navMenuData?.map((nav) => (
-                <motion.div
-                  variants={child}
-                  key={nav.route}
-                  onClick={toggleMenu}
-                  className={`relative py-6 px-6 transition-all hover:text-orange-500  ${
-                    pathname === nav.route
-                      ? "text-orange-500 border-b-2 border-orange-500"
-                      : "text-white"
-                  }`}
-                >
-                  <Link
-                    href={nav?.route}
-                    className={`hover:text-orange-500  ${
-                      pathname === nav.route ? "text-orange-500" : "text-white"
-                    }`}
+              {navMenuData.map((item, index) => (
+                <Fragment key={index}>
+                  <motion.div
+                    variants={child}
+                    layout
+                    className="w-full transition-all"
                   >
-                    {nav?.title}
-                  </Link>
-                </motion.div>
+                    <Link
+                      href={item.route}
+                      onClick={() => setMenuOpen(false)}
+                      className={`w-full py-3 block transition-all ${
+                        pathname === item.route
+                          ? "text-primary-orange"
+                          : "text-white"
+                      }`}
+                    >
+                      {item.title}
+                    </Link>
+                  </motion.div>
+                  <AnimatePresence mode="wait">
+                    {pathname === item.route && (
+                      <motion.div
+                        layoutId="activeMenu2"
+                        variants={child}
+                        initial={{ width: 0 }}
+                        animate={{ width: "100%" }}
+                        exit={{ width: 0 }}
+                        className={`bg-orange-500  ${
+                          sticky ? "h-0.5" : "h-1"
+                        } rounded-full`}
+                      />
+                    )}
+                  </AnimatePresence>
+                </Fragment>
               ))}
             </motion.div>
           </motion.div>
-        </AnimatePresence>
-      )}
+        )}
+      </AnimatePresence>
     </>
   );
 };

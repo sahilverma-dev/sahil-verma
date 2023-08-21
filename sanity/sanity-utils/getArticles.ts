@@ -11,7 +11,7 @@ export const getArticles: () => Promise<Article[]> = async () => {
       description,
       'slug': slug.current,
       'poster': poster.asset->url,
-    }`,
+    } | order(_createdAt desc)`,
     {
       caches: "no-cache",
     }

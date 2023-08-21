@@ -77,10 +77,10 @@ export const skills: Skill[] = [
     description:
       "Skilled in using Figma for collaborative and efficient UI/UX design and prototyping.",
   },
-  {
-    title: "Flutter",
-    icon: "/images/icons/flutter.svg",
-    description:
-      "Beginner in developing cross-platform mobile applications using the Flutter framework.",
-  },
+  // {
+  //   title: "Flutter",
+  //   icon: "/images/icons/flutter.svg",
+  //   description:
+  //     "Beginner in developing cross-platform mobile applications using the Flutter framework.",
+  // },
 ];

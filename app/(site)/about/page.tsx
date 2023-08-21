@@ -9,7 +9,7 @@ export const metadata = {
 const About = () => {
   return (
     <PageWrapper>
-      <div className="min-h-screen w-full max-w-7xl mx-auto ">
+      <div className="md:min-h-screen w-full max-w-7xl mx-auto mt-[130px]  h-full">
         <AboutMeSection />
       </div>
     </PageWrapper>

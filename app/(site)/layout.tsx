@@ -3,9 +3,10 @@ import "./globals.css";
 // components
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import GoogleAnalytics from "./components/GoogleAnalytics";
 
 export const metadata = {
-  metadataBase: new URL("https://sahil-verma.vercel.app"),
+  metadataBase: new URL("https://sahilverma.dev"),
   title: {
     default: "Sahil Verma - Home",
     template: `Sahil Verma - %s`,
@@ -27,6 +28,8 @@ export default async function RootLayout({
 }) {
   return (
     <html lang="en">
+      <GoogleAnalytics />
+
       <body>
         <Navbar />
         <main className="">{children}</main>

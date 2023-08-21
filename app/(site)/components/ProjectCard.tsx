@@ -13,6 +13,7 @@ interface Props {
 export const ProjectCard: FC<Props> = ({ project }) => (
   <motion.div
     layout
+    layoutId={project._id}
     variants={child}
     className="relative rounded-lg group overflow-hidden bg-slate-800 aspect-video"
   >

@@ -4,7 +4,7 @@ import { Project } from "@/interfaces";
 import { useState, FC, useEffect } from "react";
 import ProjectCard from "../../components/ProjectCard";
 
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { parent } from "@/constants/variants";
 import SectionTitle from "../../components/SectionTitle";
 
@@ -80,9 +80,11 @@ const FilterProjects: FC<Props> = ({ projects }) => {
         layout
         className="grid grid-cols-1 md:grid-cols-2 my-4 gap-4"
       >
-        {selectedProjects?.map((project: Project) => (
-          <ProjectCard key={project?._id} project={project} />
-        ))}
+        <AnimatePresence mode="popLayout">
+          {selectedProjects?.map((project: Project) => (
+            <ProjectCard key={project?._id} project={project} />
+          ))}
+        </AnimatePresence>
       </motion.div>
     </div>
   );
