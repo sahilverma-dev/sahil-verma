@@ -20,11 +20,9 @@
     "eslint-config-next": "13.4.1",
     "framer-motion": "^10.15.1",
     "lightgallery": "^2.7.1",
-    "lottie-react": "^2.4.0",
     "next": "13.4.1",
     "next-sanity": "^4.3.2",
     "postcss": "8.4.23",
-    "prismjs": "^1.29.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-hot-toast": "^2.4.1",
@@ -35,8 +33,5 @@
     "tailwindcss": "3.3.2",
     "typescript": "5.0.4",
     "typewriter-effect": "^2.20.1"
-  },
-  "devDependencies": {
-    "@types/prismjs": "^1.26.0"
   }
 }
